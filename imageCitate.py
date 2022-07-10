@@ -34,4 +34,5 @@ class ImageCitate:
 
         if self.avatar != False: image.paste(avatarImage, avatarCoords)
 
-        image.save(f'output/{self.file}')
+        if not self.file: return image
+        else: image.save(f'output/{self.file}')
